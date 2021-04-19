@@ -6,9 +6,11 @@ import { Configuration } from 'src/config/config.keys';
 
 export const databaseProviders = [
     TypeOrmModule.forRootAsync({
+        //Imports credentials of our enviroments variables with the inject.
         imports: [ConfigModule],
         inject: [ConfigService],
         async useFactory(config: ConfigService) {
+            //UseFactory: Create our connection object with the required properties.
             return {
                 ssl: true,
                 type: 'postgres' as 'postgres',
