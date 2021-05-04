@@ -1,4 +1,4 @@
-import { IsEmail, IsNotEmpty } from "class-validator";
+import { IsNotEmpty } from "class-validator";
 import { RoleType } from "src/modules/role/roletype.enum";
 import { UserDetails } from "../user.details.entity";
 
